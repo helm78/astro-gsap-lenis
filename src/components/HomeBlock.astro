@@ -1,3 +1,6 @@
+---
+---
+
 <section class="home-hero">
   <div class="home-hero__scroller">
     <div class="home-hero__sticky">
@@ -144,36 +147,35 @@
 
 <script>
   import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-  // // Register ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
+  document.addEventListener("astro:page-load", () => {
+    gsap.to(".home-hero__layer, .home-hero__wrapper", {
+      rotate: -10,
+      x: -50,
+      duration: 1,
+      ease: "power2.out",
+      transformOrigin: "bottom left",
+      scrollTrigger: {
+        trigger: ".home-hero",
+        // markers: true,
+        start: "top top",
+        end: "bottom+=25% bottom",
+        scrub: true,
+        toggleActions: "play none none reverse",
+        onLeave: () => {
+          gsap.set(".home-hero__sticky", {
+            position: "relative",
+          });
+        },
+        onEnterBack: () => {
+          gsap.set(".home-hero__sticky", {
+            position: "sticky",
+          });
+        },
+      },
+    });
+  })
 
-  gsap.to(".home-hero__layer, .home-hero__wrapper", {
-    rotate: -10,
-    x: -50,
-    duration: 1,
-    ease: "power2.out",
-    transformOrigin: "bottom left",
-    scrollTrigger: {
-      trigger: ".home-hero",
-      // markers: true,
-      start: "top top",
-      end: "bottom+=25% bottom",
-      scrub: true,
-      toggleActions: "play none none reverse",
-      onLeave: () => {
-        gsap.set(".home-hero__sticky", {
-          position: "relative",
-        });
-      },
-      onEnterBack: () => {
-        gsap.set(".home-hero__sticky", {
-          position: "sticky",
-        });
-      },
-    },
-  });
 </script>
 
 <style>

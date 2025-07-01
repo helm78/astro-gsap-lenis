@@ -23,110 +23,113 @@ const { title } = Astro.props;
       <a href="/">Home</a> | <a href="/work">Work</a>
     </nav>
     <slot />
-  </body><script>
-    import Lenis from "@studio-freight/lenis";
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    <script>
+      import Lenis from "@studio-freight/lenis";
+      import { gsap } from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+      window.gsap = gsap;
+      window.ScrollTrigger = ScrollTrigger;
 
-    // // Initialize Lenis
-    // const lenis = new Lenis({
-    //   duration: 1.2,
-    //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    //   smoothWheel: true,
-    // });
+      // // Initialize Lenis
+      // const lenis = new Lenis({
+      //   duration: 1.2,
+      //   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      //   smoothWheel: true,
+      // });
 
-    // function raf(time) {
-    //   lenis.raf(time);
-    //   requestAnimationFrame(raf);
-    // }
+      // function raf(time) {
+      //   lenis.raf(time);
+      //   requestAnimationFrame(raf);
+      // }
 
-    // requestAnimationFrame(raf);
+      // requestAnimationFrame(raf);
 
-    // Initialize Lenis with view transitions support
-    function initLenis() {
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      // Initialize Lenis with view transitions support
+      function initLenis() {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+
+        // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+        lenis.on("scroll", ScrollTrigger.update);
+
+        // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+
+        // Disable lag smoothing in GSAP
+        gsap.ticker.lagSmoothing(0);
+
+        return lenis;
+      }
+
+      // Initialize on page load
+      let lenis = initLenis();
+
+      // Handle view transitions in Astro 5+
+      document.addEventListener("astro:page-load", () => {
+        // Reinitialize Lenis after navigation
+        if (lenis) {
+          lenis.destroy();
+        }
+
+        // Refresh ScrollTrigger
+        ScrollTrigger.refresh();
+
+        // Reinitialize Lenis
+        lenis = initLenis();
       });
 
-      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+      // Clean up before navigation
+      document.addEventListener("astro:before-preparation", () => {
+        if (lenis) {
+          lenis.destroy();
+        }
+      });
+
+      // GSAP Animations
+      // Hero animations
+      // gsap.to(".title", {
+      //   opacity: 1,
+      //   y: 0,
+      //   duration: 1,
+      //   delay: 0.5,
+      //   ease: "power2.out",
+      // });
+
+      // gsap.to(".subtitle", {
+      //   opacity: 1,
+      //   y: 0,
+      //   duration: 1,
+      //   delay: 0.8,
+      //   ease: "power2.out",
+      // });
+
+      // // Box animations with ScrollTrigger
+      // gsap.utils.toArray(".box").forEach((box, index) => {
+      //   gsap.from(box as HTMLElement, {
+      //     opacity: 0,
+      //     x: -100,
+      //     duration: 1,
+      //     ease: "power2.out",
+      //     scrollTrigger: {
+      //       trigger: box as HTMLElement,
+      //       start: "top 80%",
+      //       end: "bottom 20%",
+      //       toggleActions: "play none none reverse",
+      //     },
+      //   });
+      // });
+
+      // Update ScrollTrigger on Lenis scroll
       lenis.on("scroll", ScrollTrigger.update);
-
-      // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
-
-      // Disable lag smoothing in GSAP
-      gsap.ticker.lagSmoothing(0);
-
-      return lenis;
-    }
-
-    // Initialize on page load
-    let lenis = initLenis();
-
-    // Handle view transitions in Astro 5+
-    document.addEventListener("astro:page-load", () => {
-      // Reinitialize Lenis after navigation
-      if (lenis) {
-        lenis.destroy();
-      }
-
-      // Refresh ScrollTrigger
-      ScrollTrigger.refresh();
-
-      // Reinitialize Lenis
-      lenis = initLenis();
-    });
-
-    // Clean up before navigation
-    document.addEventListener("astro:before-preparation", () => {
-      if (lenis) {
-        lenis.destroy();
-      }
-    });
-
-    // GSAP Animations
-    // Hero animations
-    // gsap.to(".title", {
-    //   opacity: 1,
-    //   y: 0,
-    //   duration: 1,
-    //   delay: 0.5,
-    //   ease: "power2.out",
-    // });
-
-    // gsap.to(".subtitle", {
-    //   opacity: 1,
-    //   y: 0,
-    //   duration: 1,
-    //   delay: 0.8,
-    //   ease: "power2.out",
-    // });
-
-    // // Box animations with ScrollTrigger
-    // gsap.utils.toArray(".box").forEach((box, index) => {
-    //   gsap.from(box as HTMLElement, {
-    //     opacity: 0,
-    //     x: -100,
-    //     duration: 1,
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //       trigger: box as HTMLElement,
-    //       start: "top 80%",
-    //       end: "bottom 20%",
-    //       toggleActions: "play none none reverse",
-    //     },
-    //   });
-    // });
-
-    // Update ScrollTrigger on Lenis scroll
-    lenis.on("scroll", ScrollTrigger.update);
-  </script>
+    </script>
+  </body>
 </html>
 
 <style is:global>
