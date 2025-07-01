@@ -1,0 +1,87 @@
+---
+  const { title, videoSrc, index } = Astro.props;
+---
+<section class={`project-container project-container-${index}`} data-index={index}>
+  <div class={`project-wrapper project-wrapper-${index}`}>
+    <div class="project-info">
+      <div class="project-info__wrapper">
+        <div class="module-subtitle-title">
+          <h2>{title}</h2>
+        </div>
+      </div>
+      <div class="project-media">
+        <video
+          height="900"
+          width="1600"
+          playsinline=""
+          muted=""
+          controlslist="nodownload noplaybackrate"
+          disablepictureinpicture=""
+          src={videoSrc}
+        ></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{index}}>
+  document.addEventListener("astro:page-load", () => {
+    window.gsap.timeline({
+      scrollTrigger: {
+        trigger: `.project-container-${index}`,
+        start: "top bottom",
+        end: "bottom+=100% bottom",
+        markers: index === 0 ? true : false,
+        scrub: true,
+      },
+    })
+    .from(`.project-wrapper-${index}`, {
+      x: index === 0 ? -70 : 100,
+      y: index === 0 ? 0 : -50,
+      rotate: index === 0 ? 10 : 15,
+      duration: 1,
+      transformOrigin: "left bottom",
+      ease: "power1.out",
+    })
+    .to(`.project-wrapper-${index}`, {
+      x: -50,
+      rotate: -10,
+      duration: 1,
+      transformOrigin: "left bottom",
+      ease: "power1.in",
+    });
+  })
+</script>
+
+<style>
+  .project-container {
+    height: 100dvh;
+    /* margin-top: -2vh; */
+    border: 1px solid red;
+    position: relative;
+  }
+  .project-wrapper {
+    width: 100%;
+    background-color: rgba(222, 223, 227, 0.9);
+  }
+  .project-info {
+    height: 100%;
+    width: 100%;
+  }
+  .module-subtitle-title h2 {
+    font-size: 5.55556vw;
+    font-weight: 470;
+    letter-spacing: -.04em;
+    line-height: .8;
+  }
+  .project-media {
+    height: 120dvh;
+    width: 100%;
+    padding: 50px;
+  }
+  .project-media video {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+</style>

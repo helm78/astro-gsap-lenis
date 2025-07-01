@@ -1,0 +1,55 @@
+<div class="home-intro">
+  <div class="home-intro__wrapper gutters">
+    <div class="module-subtitle-title gutters">
+      <h2>Highligts</h2>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    window.gsap.timeline({
+      scrollTrigger: {
+        trigger: ".home-intro",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    })
+    .from(".home-intro__wrapper", {
+      x: -50,
+      rotate: 15,
+      duration: 1,
+      transformOrigin: "left top",
+      ease: "power1.out",
+    })
+    .to(".home-intro__wrapper", {
+      x: -50,
+      rotate: -5,
+      duration: 1,
+      transformOrigin: "left bottom",
+      delay: 0.5,
+      ease: "power1.in",
+    });
+  })
+
+</script>
+
+<style>
+  .home-intro {
+    height: 100dvh;
+    position: relative;
+  }
+  .home-intro__wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+  }
+  .module-subtitle-title h2 {
+    font-size: 12.15278vw;
+    font-weight: 500;
+    letter-spacing: -.04em;
+    line-height: .8;
+    padding-top: 20px;
+  }
+</style>

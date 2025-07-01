@@ -1,0 +1,26 @@
+---
+  import json from '../data/data.json';
+import Project from './Project.astro';
+  
+  const { projects } = json;
+---
+<div class="home-projects">
+  <div class="home-projects-wrapper">
+    <div class="home-project">
+      {
+        projects.map((project, index) => (
+          <Project index={index} title={project.title} videoSrc={project.video} />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .home-projects {
+    height: 100dvh;
+    /* margin-top: -35vh; */
+    margin-top: -35vh;
+    position: relative;
+  }
+</style>
