@@ -12,11 +12,6 @@ const { projects } = json;
           <Project index={index} title={project.title} videoSrc={project.video} />
         ))
       }
-      <!-- {
-        projects.map((project, index) => (
-          <Project index={index + 3} title={project.title} videoSrc={project.video} />
-        ))
-      } -->
     </div>
   </div>
 </div>
@@ -27,7 +22,6 @@ const { projects } = json;
       scrollTrigger: {
         trigger: `.home-projects`,
         start: "top bottom",
-        // end: "bottom-=10% center",
         end: `bottom center`,
         scrub: true,
         markers: true,
