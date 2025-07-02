@@ -1,8 +1,8 @@
 ---
-  import json from '../data/data.json';
+import json from '../data/data.json';
 import Project from './Project.astro';
   
-  const { projects } = json;
+const { projects } = json;
 ---
 <div class="home-projects">
   <div class="home-projects-wrapper">
@@ -12,14 +12,68 @@ import Project from './Project.astro';
           <Project index={index} title={project.title} videoSrc={project.video} />
         ))
       }
+      <!-- {
+        projects.map((project, index) => (
+          <Project index={index + 3} title={project.title} videoSrc={project.video} />
+        ))
+      } -->
     </div>
   </div>
 </div>
 
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const tl = window.gsap.timeline({
+      scrollTrigger: {
+        trigger: `.home-projects`,
+        start: "top bottom",
+        // end: "bottom-=10% center",
+        end: `bottom center`,
+        scrub: true,
+        markers: true,
+      },
+    })
+
+    window.gsap.utils.toArray(".project-container").forEach((container, index) => {
+      const projectMedia = (container as HTMLElement).querySelectorAll(`.project-video`);
+      tl
+      .from(container as HTMLElement, {
+        x: index === 0 ? -70 : 100,
+        delay: index === 0 ? 0.05 : 0,
+        rotate: index === 0 ? 10 : 15,
+        duration: 0.5,
+        transformOrigin: "left bottom",
+        ease: "power1.out",
+      }, index === 0 ? 0 : `-=0.5`)
+      .from(projectMedia, {
+        xPercent: 10,
+        yPercent: 10,
+        rotate: 15,
+        duration: 0.3,
+        transformOrigin: "left bottom",
+        ease: "power1.out",
+      }, "-=0.3")
+      .to(container as HTMLElement, {
+        x: -50,
+        rotate: -10,
+        duration: 0.5,
+        transformOrigin: "left bottom",
+        ease: "power1.in",
+      })
+      .to(projectMedia, {
+        xPercent: -2,
+        yPercent: 3,
+        rotate: -2,
+        duration: 0.5,
+        transformOrigin: "left bottom",
+        ease: "power1.in",
+      }, "-=0.5");
+    });
+  })
+</script>
+
 <style>
   .home-projects {
-    /* height: 100dvh; */
-    /* margin-top: -35vh; */
     margin-top: -35vh;
     position: relative;
   }

@@ -1,7 +1,7 @@
 ---
   const { title, videoSrc, index } = Astro.props;
 ---
-<section class={`project-container project-container-${index}`} data-index={index}>
+<section class={`project-container project-container-${index}`} data-index={index} style={`margin-top: ${index === 0 ? '0' : '-35vh'}`}>
   <div class={`project-wrapper project-wrapper-${index}`}>
     <div class="project-info">
       <div class="project-info__wrapper">
@@ -10,54 +10,25 @@
         </div>
       </div>
       <div class="project-media">
-        <video
-          height="900"
-          width="1600"
-          playsinline=""
-          muted=""
-          controlslist="nodownload noplaybackrate"
-          disablepictureinpicture=""
-          src={videoSrc}
-        ></video>
+        <div class="project-video">
+          <video
+            height="900"
+            width="1600"
+            playsinline=""
+            muted=""
+            controlslist="nodownload noplaybackrate"
+            disablepictureinpicture=""
+            src={videoSrc}
+          ></video>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<script define:vars={{index}}>
-  document.addEventListener("astro:page-load", () => {
-    window.gsap.timeline({
-      scrollTrigger: {
-        trigger: `.project-container-${index}`,
-        start: "top bottom",
-        end: "bottom+=100% bottom",
-        markers: index === 0 ? true : false,
-        scrub: true,
-      },
-    })
-    .from(`.project-wrapper-${index}`, {
-      x: index === 0 ? -70 : 100,
-      y: index === 0 ? 0 : -50,
-      rotate: index === 0 ? 10 : 15,
-      duration: 1,
-      transformOrigin: "left bottom",
-      ease: "power1.out",
-    })
-    .to(`.project-wrapper-${index}`, {
-      x: -50,
-      rotate: -10,
-      duration: 1,
-      transformOrigin: "left bottom",
-      ease: "power1.in",
-    });
-  })
-</script>
-
 <style>
   .project-container {
-    height: 100dvh;
-    /* margin-top: -2vh; */
-    border: 1px solid red;
+    min-height: 100dvh;
     position: relative;
   }
   .project-wrapper {
@@ -75,9 +46,15 @@
     line-height: .8;
   }
   .project-media {
-    height: 120dvh;
+    position: relative;
+    /* height: 100dvh; */
+    /* width: 100%; */
+    border: 1px solid red;
+  }
+  .project-video {
+    height: 125vh;
     width: 100%;
-    padding: 50px;
+    padding: 50px 0;
   }
   .project-media video {
     height: 100%;
