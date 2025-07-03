@@ -29,34 +29,26 @@ const { projects } = json;
 
     const tl = window.gsap.timeline({
       scrollTrigger: {
-        onUpdate: (self) => {
-          figures.forEach((figure, index) => {
-            const video = (figure as HTMLElement).querySelector("video");
-            if (ScrollTrigger.isInViewport(figure as HTMLVideoElement)) {
-              if (index === 0 && self.progress > 0.5) {
-                (video as HTMLVideoElement).pause();
-              } else if (index === 1 && self.progress > 0.7) {
-                (video as HTMLVideoElement).pause();
-              } else {
-                if ((video as HTMLVideoElement).paused) {
-                  (video as HTMLVideoElement).play();
-                }
-              }
-            } else {
-              // if (!(video as HTMLVideoElement).paused) {
-              (video as HTMLVideoElement).pause();
-              // }
-            }
-          });
-        },
-        onScrubComplete: () => {
-          figures.forEach((figure) => {
-            const video = (figure as HTMLElement).querySelector("video");
-            if (!(video as HTMLVideoElement).paused) {
-              (video as HTMLVideoElement).pause();
-            }
-          });
-        },
+        // onUpdate: (self) => {
+        //   figures.forEach((figure, index) => {
+        //     const video = (figure as HTMLElement).querySelector("video");
+        //     if (ScrollTrigger.isInViewport(figure as HTMLVideoElement)) {
+        //       if (index === 0 && self.progress > 0.5) {
+        //         (video as HTMLVideoElement).pause();
+        //       } else if (index === 1 && self.progress > 0.7) {
+        //         (video as HTMLVideoElement).pause();
+        //       } else {
+        //         if ((video as HTMLVideoElement).paused) {
+        //           (video as HTMLVideoElement).play();
+        //         }
+        //       }
+        //     } else {
+        //       // if (!(video as HTMLVideoElement).paused) {
+        //       (video as HTMLVideoElement).pause();
+        //       // }
+        //     }
+        //   });
+        // },
         trigger: `.home-projects`,
         start: "top bottom",
         end: `bottom center`,
