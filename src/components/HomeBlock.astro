@@ -4,16 +4,18 @@
 <section class="home-hero">
   <div class="home-hero__scroller">
     <div class="home-hero__sticky">
-      <video
-        height="900"
-        width="1600"
-        playsinline=""
-        muted=""
-        loop=""
-        controlslist="nodownload noplaybackrate"
-        disablepictureinpicture=""
-        src="https://player.vimeo.com/progressive_redirect/playback/1017272898/rendition/720p/file.mp4?loc=external&log_user=0&signature=d02d61e39102e10801a1316ce6ba75bc842b6f7008f05fe111b3cac233caf241"
-      ></video>
+      <figure>
+        <video
+          height="900"
+          width="1600"
+          playsinline=""
+          muted=""
+          loop=""
+          controlslist="nodownload noplaybackrate"
+          disablepictureinpicture=""
+          src="https://player.vimeo.com/progressive_redirect/playback/1017272898/rendition/720p/file.mp4?loc=external&log_user=0&signature=d02d61e39102e10801a1316ce6ba75bc842b6f7008f05fe111b3cac233caf241"
+        ></video>
+      </figure>
     </div>
     <div aria-hidden="true" class="home-hero__layer acetate"></div>
     <div class="home-hero__wrapper">
@@ -148,6 +150,10 @@
   // import { gsap } from "gsap";
 
   document.addEventListener("astro:page-load", () => {
+    const video = document.querySelector(".home-hero video");
+    const figure = document.querySelector(".home-hero figure");
+    // (video as HTMLVideoElement).play();
+    
     window.gsap.to(".home-hero__layer, .home-hero__wrapper", {
       rotate: -10,
       x: -50,
@@ -155,6 +161,17 @@
       ease: "power2.out",
       transformOrigin: "bottom left",
       scrollTrigger: {
+        /* onUpdate: self => {
+          if (ScrollTrigger.isInViewport(figure as HTMLElement)) {
+            if ((video as HTMLVideoElement).paused) {
+              (video as HTMLVideoElement).play();
+            }
+          } else {
+            // if (!(video as HTMLVideoElement).paused) {
+              (video as HTMLVideoElement).pause();
+            // }
+          }
+        }, */
         trigger: ".home-hero",
         // markers: true,
         start: "top top",
@@ -195,6 +212,10 @@
     overflow: hidden;
     position: sticky;
     top: 0;
+  }
+  .home-hero__sticky figure {
+    height: 100%;
+    width: 100%;
   }
   .home-hero__sticky video {
     height: 100%;

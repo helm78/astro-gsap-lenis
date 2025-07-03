@@ -11,15 +11,17 @@
       </div>
       <div class="project-media">
         <div class="project-video">
-          <video
-            height="900"
-            width="1600"
-            playsinline=""
-            muted=""
-            controlslist="nodownload noplaybackrate"
-            disablepictureinpicture=""
-            src={videoSrc}
-          ></video>
+          <figure>
+            <video
+              height="900"
+              width="1600"
+              playsinline=""
+              muted=""
+              controlslist="nodownload noplaybackrate"
+              disablepictureinpicture=""
+              src={videoSrc}
+            ></video>
+          </figure>
         </div>
       </div>
     </div>
@@ -40,6 +42,8 @@
     width: 100%;
   }
   .module-subtitle-title h2 {
+    padding-top: 30px;
+    padding-left: 5px;
     font-size: 5.55556vw;
     font-weight: 470;
     letter-spacing: -.04em;
@@ -47,14 +51,15 @@
   }
   .project-media {
     position: relative;
-    /* height: 100dvh; */
-    /* width: 100%; */
-    border: 1px solid red;
   }
   .project-video {
-    height: 125vh;
+    height: 110vh;
     width: 100%;
     padding: 50px 0;
+  }
+  .home-hero__sticky figure {
+    height: 100%;
+    width: 100%;
   }
   .project-media video {
     height: 100%;

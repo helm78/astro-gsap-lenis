@@ -18,18 +18,34 @@ const { projects } = json;
 
 <script>
   document.addEventListener("astro:page-load", () => {
+    const elements = window.gsap.utils.toArray(".project-container");
+    const total = elements.length;
+    const figures = window.gsap.utils.toArray(".project-container figure");
+    
     const tl = window.gsap.timeline({
       scrollTrigger: {
+        /* onUpdate: self => {
+          figures.forEach((figure, index) => {
+            const video = (figure as HTMLElement).querySelector("video")
+            if (ScrollTrigger.isInViewport(figure as HTMLVideoElement)) {
+              if ((video as HTMLVideoElement).paused) {
+                (video as HTMLVideoElement).play();
+              }
+            } else {
+              // if (!(video as HTMLVideoElement).paused) {
+                (video as HTMLVideoElement).pause();
+              // }
+            }
+          })
+        }, */
         trigger: `.home-projects`,
         start: "top bottom",
         end: `bottom center`,
         scrub: true,
-        markers: true,
       },
     })
-
-    window.gsap.utils.toArray(".project-container").forEach((container, index) => {
-      const projectMedia = (container as HTMLElement).querySelectorAll(`.project-video`);
+    elements.forEach((container, index) => {
+      const projectMedia = (container as HTMLElement).querySelector(`.project-video`);
       tl
       .from(container as HTMLElement, {
         x: index === 0 ? -70 : 100,
@@ -40,35 +56,42 @@ const { projects } = json;
         ease: "power1.out",
       }, index === 0 ? 0 : `-=0.5`)
       .from(projectMedia, {
-        xPercent: 10,
-        yPercent: 10,
-        rotate: 15,
+        xPercent: 5,
+        yPercent: 15,
+        rotate: 2,
         duration: 0.3,
-        transformOrigin: "left bottom",
+        transformOrigin: "right bottom",
         ease: "power1.out",
       }, "-=0.3")
-      .to(container as HTMLElement, {
-        x: -50,
-        rotate: -10,
-        duration: 0.5,
-        transformOrigin: "left bottom",
-        ease: "power1.in",
-      })
-      .to(projectMedia, {
-        xPercent: -2,
-        yPercent: 3,
-        rotate: -2,
-        duration: 0.5,
-        transformOrigin: "left bottom",
-        ease: "power1.in",
-      }, "-=0.5");
+      if (index !== total - 1) {
+        tl.to(container as HTMLElement, {
+          yPercent: 20,
+          x: -50,
+          rotate: -5,
+          duration: 0.5,
+          transformOrigin: "left bottom",
+          ease: "power1.in",
+        })
+        .to(projectMedia, {
+          xPercent: -2,
+          yPercent: 3,
+          rotate: -2,
+          duration: 0.5,
+          transformOrigin: "left bottom",
+          ease: "power1.in",
+        }, "-=0.5");
+      } else {
+        tl.to(container as HTMLElement, {
+          duration: 0.5,
+        })
+      }
     });
   })
 </script>
 
 <style>
   .home-projects {
-    margin-top: -35vh;
+    margin-top: -42.5vh;
     position: relative;
   }
 </style>
