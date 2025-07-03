@@ -6,10 +6,48 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+const anim = {
+  old: {
+    name: "bump-out",
+    duration: "1s",
+    easing: "ease-out",
+    // direction: "reverse",
+  },
+  new: {
+    name: "bump-in",
+    duration: "1s",
+    easing: "ease-out",
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
+
+const animOverlay = {
+  old: {
+    name: "overlay-out",
+    duration: "1s",
+    easing: "ease-out",
+    // direction: "reverse",
+  },
+  new: {
+    name: "overlay-in",
+    duration: "1s",
+    easing: "ease-out",
+  },
+};
+
+const customOverlayTransition = {
+  forwards: animOverlay,
+  backwards: animOverlay,
+};
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="none">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -19,12 +57,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav style="position: absolute; top: 0; padding: 1rem; z-index: 1000;">
+    <nav style="position: fixed; top: 0; padding: 1rem; z-index: 1000;">
       <a href="/">Home</a> | <a href="/work">Work</a>
     </nav>
-    <main transition:animate="slide">
+    <main transition:animate={customTransition}>
       <slot />
     </main>
+    <div class="overlay" transition:animate={customOverlayTransition}></div>
     <script>
       import Lenis from "@studio-freight/lenis";
       import { gsap } from "gsap";
@@ -159,17 +198,58 @@ const { title } = Astro.props;
 
   body {
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    height: 100%;
   }
 
-  /* Custom view transition styles */
-  @view-transition {
-    navigation: auto;
+  main {
+    position: relative;
+    z-index: 1;
   }
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 0.3s;
-    animation-timing-function: ease-in-out;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  @keyframes bump-in {
+    0% {
+      transform: rotate(-5deg) translate(-100%, 100%);
+    }
+    100% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+  }
+
+  @keyframes overlay-in {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes bump-out {
+    0% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+    100% {
+      transform: rotate(5deg) translate(100%, -100vh);
+    }
+  }
+
+  @keyframes overlay-out {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>
