@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="home-hero">
@@ -152,8 +153,8 @@
   document.addEventListener("astro:page-load", () => {
     const video = document.querySelector(".home-hero video");
     const figure = document.querySelector(".home-hero figure");
-    // (video as HTMLVideoElement).play();
-    
+    (video as HTMLVideoElement).play();
+
     window.gsap.to(".home-hero__layer, .home-hero__wrapper", {
       rotate: -10,
       x: -50,
@@ -161,17 +162,17 @@
       ease: "power2.out",
       transformOrigin: "bottom left",
       scrollTrigger: {
-        /* onUpdate: self => {
-          if (ScrollTrigger.isInViewport(figure as HTMLElement)) {
+        onUpdate: (self) => {
+          if (ScrollTrigger.isInViewport(figure as HTMLElement) && self.progress < 0.6) {
             if ((video as HTMLVideoElement).paused) {
               (video as HTMLVideoElement).play();
             }
           } else {
             // if (!(video as HTMLVideoElement).paused) {
-              (video as HTMLVideoElement).pause();
+            (video as HTMLVideoElement).pause();
             // }
           }
-        }, */
+        },
         trigger: ".home-hero",
         // markers: true,
         start: "top top",
@@ -190,8 +191,7 @@
         },
       },
     });
-  })
-
+  });
 </script>
 
 <style>

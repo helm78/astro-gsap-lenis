@@ -1,15 +1,20 @@
 ---
-import json from '../data/data.json';
-import Project from './Project.astro';
-  
+import json from "../data/data.json";
+import Project from "./Project.astro";
+
 const { projects } = json;
 ---
+
 <div class="home-projects">
   <div class="home-projects-wrapper">
     <div class="home-project">
       {
         projects.map((project, index) => (
-          <Project index={index} title={project.title} videoSrc={project.video} />
+          <Project
+            index={index}
+            title={project.title}
+            videoSrc={project.video}
+          />
         ))
       }
     </div>
@@ -21,48 +26,70 @@ const { projects } = json;
     const elements = window.gsap.utils.toArray(".project-container");
     const total = elements.length;
     const figures = window.gsap.utils.toArray(".project-container figure");
-    
+
     const tl = window.gsap.timeline({
       scrollTrigger: {
-        /* onUpdate: self => {
+        onUpdate: (self) => {
           figures.forEach((figure, index) => {
-            const video = (figure as HTMLElement).querySelector("video")
+            const video = (figure as HTMLElement).querySelector("video");
             if (ScrollTrigger.isInViewport(figure as HTMLVideoElement)) {
-              if ((video as HTMLVideoElement).paused) {
-                (video as HTMLVideoElement).play();
+              if (index === 0 && self.progress > 0.5) {
+                (video as HTMLVideoElement).pause();
+              } else if (index === 1 && self.progress > 0.7) {
+                (video as HTMLVideoElement).pause();
+              } else {
+                if ((video as HTMLVideoElement).paused) {
+                  (video as HTMLVideoElement).play();
+                }
               }
             } else {
               // if (!(video as HTMLVideoElement).paused) {
-                (video as HTMLVideoElement).pause();
+              (video as HTMLVideoElement).pause();
               // }
             }
-          })
-        }, */
+          });
+        },
+        onScrubComplete: () => {
+          figures.forEach((figure) => {
+            const video = (figure as HTMLElement).querySelector("video");
+            if (!(video as HTMLVideoElement).paused) {
+              (video as HTMLVideoElement).pause();
+            }
+          });
+        },
         trigger: `.home-projects`,
         start: "top bottom",
         end: `bottom center`,
         scrub: true,
       },
-    })
+    });
     elements.forEach((container, index) => {
-      const projectMedia = (container as HTMLElement).querySelector(`.project-video`);
-      tl
-      .from(container as HTMLElement, {
-        x: index === 0 ? -70 : 100,
-        delay: index === 0 ? 0.05 : 0,
-        rotate: index === 0 ? 10 : 15,
-        duration: 0.5,
-        transformOrigin: "left bottom",
-        ease: "power1.out",
-      }, index === 0 ? 0 : `-=0.5`)
-      .from(projectMedia, {
-        xPercent: 5,
-        yPercent: 15,
-        rotate: 2,
-        duration: 0.3,
-        transformOrigin: "right bottom",
-        ease: "power1.out",
-      }, "-=0.3")
+      const projectMedia = (container as HTMLElement).querySelector(
+        `.project-video`,
+      );
+      tl.from(
+        container as HTMLElement,
+        {
+          x: index === 0 ? -70 : 100,
+          delay: index === 0 ? 0.05 : 0,
+          rotate: index === 0 ? 10 : 15,
+          duration: 0.5,
+          transformOrigin: "left bottom",
+          ease: "power1.out",
+        },
+        index === 0 ? 0 : `-=0.5`,
+      ).from(
+        projectMedia,
+        {
+          xPercent: 5,
+          yPercent: 15,
+          rotate: 2,
+          duration: 0.3,
+          transformOrigin: "right bottom",
+          ease: "power1.out",
+        },
+        "-=0.3",
+      );
       if (index !== total - 1) {
         tl.to(container as HTMLElement, {
           yPercent: 20,
@@ -71,22 +98,25 @@ const { projects } = json;
           duration: 0.5,
           transformOrigin: "left bottom",
           ease: "power1.in",
-        })
-        .to(projectMedia, {
-          xPercent: -2,
-          yPercent: 3,
-          rotate: -2,
-          duration: 0.5,
-          transformOrigin: "left bottom",
-          ease: "power1.in",
-        }, "-=0.5");
+        }).to(
+          projectMedia,
+          {
+            xPercent: -2,
+            yPercent: 3,
+            rotate: -2,
+            duration: 0.5,
+            transformOrigin: "left bottom",
+            ease: "power1.in",
+          },
+          "-=0.5",
+        );
       } else {
         tl.to(container as HTMLElement, {
           duration: 0.5,
-        })
+        });
       }
     });
-  })
+  });
 </script>
 
 <style>
