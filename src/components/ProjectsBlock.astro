@@ -60,6 +60,7 @@ const { projects } = json;
         trigger: `.home-projects`,
         start: "top bottom",
         end: `bottom center`,
+        markers: true,
         scrub: true,
       },
     });
@@ -92,13 +93,14 @@ const { projects } = json;
       );
       if (index !== total - 1) {
         tl.to(container as HTMLElement, {
-          yPercent: 20,
+          yPercent: 25,
           x: -50,
           rotate: -5,
           duration: 0.5,
           transformOrigin: "left bottom",
           ease: "power1.in",
-        }).to(
+        })
+        .to(
           projectMedia,
           {
             xPercent: -2,
