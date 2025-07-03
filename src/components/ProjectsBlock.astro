@@ -22,12 +22,14 @@ const { projects } = json;
 </div>
 
 <script>
+  let tl: any = null;
   document.addEventListener("astro:page-load", () => {
     const elements = window.gsap.utils.toArray(".project-container");
     const total = elements.length;
+    if (total === 0) return;
     const figures = window.gsap.utils.toArray(".project-container figure");
 
-    const tl = window.gsap.timeline({
+    tl = window.gsap.timeline({
       scrollTrigger: {
         // onUpdate: (self) => {
         //   figures.forEach((figure, index) => {
@@ -110,6 +112,13 @@ const { projects } = json;
         });
       }
     });
+  });
+
+  document.addEventListener("astro:before-preparation", () => {
+    if (tl) {
+      tl.kill();
+      tl = null;
+    }
   });
 </script>
 

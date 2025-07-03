@@ -201,7 +201,10 @@
   });
 
   document.addEventListener("astro:before-preparation", () => {
-    if (tween) tween.kill();
+    if (tween) {
+      tween.kill();
+      tween = null;
+    }
   });
 </script>
 
