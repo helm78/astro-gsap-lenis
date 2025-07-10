@@ -8,15 +8,7 @@ const { projects } = json;
 <div class="home-projects">
   <div class="home-projects-wrapper">
     <div class="home-project">
-      {
-        projects.map((project, index) => (
-          <Project
-            index={index}
-            title={project.title}
-            videoSrc={project.video}
-          />
-        ))
-      }
+      {projects.map((project, index) => <Project index={index} {...project} />)}
     </div>
   </div>
 </div>
@@ -93,8 +85,7 @@ const { projects } = json;
           duration: 0.5,
           transformOrigin: "left bottom",
           ease: "power1.in",
-        })
-        .to(
+        }).to(
           projectMedia,
           {
             xPercent: -2,

@@ -3,17 +3,23 @@
     {
       "title": "Here, Tomorrow",
       "slug": "here-tomorrow",
-      "video": "https://player.vimeo.com/progressive_redirect/playback/1075238854/rendition/1440p/file.mp4?loc=external&log_user=0&signature=ab2898724061630d120ac55f4d347abc72e77432b75945a58a7436f1975b7a18"
+      "video": "https://player.vimeo.com/progressive_redirect/playback/1075238854/rendition/1440p/file.mp4?loc=external&log_user=0&signature=ab2898724061630d120ac55f4d347abc72e77432b75945a58a7436f1975b7a18",
+      "image": "https://www.datocms-assets.com/136821/1744620870-riotgames_blossoms_theline_still.jpeg?fit=crop&h=2186&w=3456",
+      "description": "This piece is more than just a celebration of new in-game content. It’s a cinematic journey into a richly imagined universe."
     },
     {
       "title": "Azuki Elementals",
       "slug": "azuki-elementals",
-      "video": "https://player.vimeo.com/progressive_redirect/playback/1000438726/rendition/1080p/file.mp4?loc=external&log_user=0&signature=cd0a01bd995d6998f1f4a82cb2335f4213e7aceb15314153333eef699cfdb71a"
+      "video": "https://player.vimeo.com/progressive_redirect/playback/1000438726/rendition/1080p/file.mp4?loc=external&log_user=0&signature=cd0a01bd995d6998f1f4a82cb2335f4213e7aceb15314153333eef699cfdb71a",
+      "image": "https://www.datocms-assets.com/136821/1725275102-vlcsnap-2024-09-02-11h38m56s726-2.jpg?crop=focalpoint&fit=crop&fp-x=0.61&fp-y=0.26&h=2186&w=3456",
+      "description": "Azuki Elementals is our hype-piece for Los Angeles based Web3 anime brand Azuki. This film showcases the Azuki Elementals, a collection of characters within the four domains of the Garden: Earth, Fire, Lightning and Water."
     },
     {
       "title": "Marvel Snap / Hero",
       "slug": "marvel-snap-hero",
-      "video": "https://player.vimeo.com/progressive_redirect/playback/1007627724/rendition/1080p/file.mp4?loc=external&log_user=0&signature=41fcd2bd8b9c45ffb168fd843955caf3daa868b55bceb67f951cce974f296f6c"
+      "video": "https://player.vimeo.com/progressive_redirect/playback/1007627724/rendition/1080p/file.mp4?loc=external&log_user=0&signature=41fcd2bd8b9c45ffb168fd843955caf3daa868b55bceb67f951cce974f296f6c",
+      "image": "https://www.datocms-assets.com/136821/1724062932-theline_stillframes_hero_marvel_snap_18.jpeg?fit=crop&h=2186&w=3456",
+      "description": "Inspired by the shiny new Marvel Snap game, we were tasked with creating a music video for ‘Hero’. A banging new track by Martin Garrix & JVKE."
     }
   ]
 }

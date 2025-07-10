@@ -1,7 +1,418 @@
 ---
 export const prerender = true;
+import json from "@/data/data.json";
+import Layout from "@/layouts/Layout.astro";
 
 export async function getStaticPaths() {
- return []
+  const { projects } = json;
+  return projects.map((project) => ({
+    params: { id: project.slug },
+  }));
 }
+
+const { id } = Astro.params;
+const project = json.projects.find((p) => p.slug === id);
+if (!project) {
+  throw new Error(`Project with slug "${id}" not found`);
+}
+const { title, video, image, description } = project;
 ---
+
+<Layout title="Lenis & GSAP Demo">
+  <div class="case-study">
+    <div class="case-study-hero">
+      <div class="case-hero gutters">
+        <div class="case-hero__scroller">
+          <div class="case-hero__sticky">
+            <div class="case-hero__fig-wrapper">
+              <figure class="case-hero__fig">
+                <picture class="base-image--fit base-image--loaded base-image">
+                  <img
+                    class="base-image__img"
+                    decoding="async"
+                    src={image}
+                    width="1920"
+                    height="1080"
+                    alt=""
+                  />
+                </picture>
+              </figure>
+            </div>
+          </div>
+          <div class="case-hero__container case-hero__container--acetate">
+            <span
+              aria-hidden="true"
+              class="case-hero__acetate case-hero__acetate--main acetate"
+            ></span>
+            <span
+              aria-hidden="true"
+              class="case-hero__acetate case-hero__acetate--clone acetate"
+            ></span>
+          </div>
+          <div class="case-hero__container">
+            <div class="case-hero__content">
+              <div class="case-hero-content">
+                <div class="case-hero-content__header p6 ttu">
+                  <p>
+                    24FPS <span
+                      class="case-hero-content__meta-mobile slash-light"
+                      ><em>/</em>&nbsp;03:08</span
+                    >
+                  </p><ul class="case-hero-content__tags">
+                    <li class="case-hero-content__tag">Branded</li>
+                  </ul><p class="case-hero-content__meta">
+                    <span class="dot--12 dot--white dot--filled dot"
+                    ></span>03:08
+                  </p><p class="case-hero-content__date">April ‘25</p><p
+                    class="copyrights"
+                  >
+                    THE LINE © MMXXV
+                  </p>
+                </div>
+                <h1 class="case-hero-content__title h1 slash-light">
+                  <span class="text-splitter--splitted text-splitter">
+                    <div class="anim-line letter-M">
+                      <div class="anim-word">{title}</div>
+                    </div>
+                  </span>
+                </h1>
+                <button class="case-hero-content__arrow"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 79 91"
+                    ><path
+                      d="m7.233 44.216 32.196 32.52 32.196-32.662L79 51.205 39.43 91 0 51.348zM44.961 0v82.014H33.898V0z"
+                    ></path></svg
+                  ></button
+                >
+              </div>
+              <div class="case-hero__trigger"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="case-intro">
+      <div class="gutters">
+        <div class="intro">
+          <h3 class="intro__title h3">
+            <span>{description}</span>
+          </h3><h2 class="section-title--pt section-title p7 ttu fw440">
+            <span class="fw300">/&nbsp;</span>Behind the line
+          </h2>
+        </div><ul class="case-intro__list">
+          <li class="case-intro__list-item">
+            <p class="p7 ttu fw440">Director</p><span
+              class="case-intro__list-item-inner"
+              ><a href="/work" class="case-intro__list-item-link p5"
+                >Tim McCourt</a
+              ><a href="/work" class="case-intro__list-item-link p5"
+                >Max Taylor</a
+              ></span
+            >
+          </li><li class="case-intro__list-item">
+            <p class="p7 ttu fw440">Client</p><span
+              class="case-intro__list-item-inner"
+              ><p class="p5">Nuverse, Second Dinner</p></span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  let tl: any = null;
+  document.addEventListener("astro:page-load", () => {
+    const acetate = window.gsap.utils.toArray(
+      ".case-study .case-hero__container",
+    );
+    const figure = document.querySelector(".case-study figure");
+    if (!figure) return;
+
+    tl = window.gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".case-study-hero",
+          markers: true,
+          start: "top top",
+          end: "bottom+=100% bottom",
+          scrub: true,
+          toggleActions: "play none none reverse",
+        },
+      })
+      .to(acetate, {
+        rotate: 10,
+        yPercent: 70,
+        duration: 1,
+        transformOrigin: "bottom right",
+        ease: "power1.out",
+      })
+      .to(
+        figure,
+        {
+          yPercent: -30,
+          duration: 2,
+          transformOrigin: "bottom right",
+          ease: "power1.out",
+        },
+        "-=1",
+      );
+  });
+
+  document.addEventListener("astro:before-preparation", () => {
+    if (tl) {
+      tl.kill();
+      tl = null;
+    }
+  });
+</script>
+
+<style>
+  .case-study {
+    background-color: #f8f8f8;
+  }
+  .case-study-hero {
+    height: 100svh;
+  }
+  .case-hero {
+    height: 100svh;
+    overflow: clip;
+    position: relative;
+  }
+  .case-hero__scroller {
+    top: 0;
+    right: 0;
+    bottom: -100svh;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+  }
+  .case-hero__sticky {
+    height: 100svh;
+    overflow: clip;
+    position: sticky;
+    top: 0;
+  }
+  .case-hero__fig-wrapper,
+  .case-hero__trigger {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+  .case-hero__fig {
+    height: 100%;
+  }
+  .base-image--fit {
+    height: 100%;
+  }
+  .base-image {
+    display: block;
+  }
+  .base-image--fit .base-image__img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .base-image__img {
+    position: relative;
+  }
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .case-hero__container--acetate {
+    mix-blend-mode: multiply;
+  }
+  .case-hero__container {
+    bottom: 50%;
+    color: #f8f8f8;
+    height: 77.4svh;
+    position: absolute;
+    right: 0.46296vw;
+    width: 87.847%;
+    z-index: 2;
+  }
+  .acetate {
+    background-color: red;
+    inset: 0;
+    mix-blend-mode: multiply;
+    position: absolute;
+  }
+  .case-hero__acetate--clone.acetate {
+    bottom: 0;
+    right: 0;
+    background-color: red;
+    mix-blend-mode: multiply;
+    position: absolute;
+  }
+  .case-hero__content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 0.46296vw;
+  }
+  .case-hero-content__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .letter-M {
+    margin-left: -0.068em;
+  }
+  .ttu {
+    text-transform: uppercase;
+  }
+  .p6 {
+    font-size: 0.92593vw;
+  }
+  .h1,
+  h1 {
+    font-size: 12.15278vw;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 0.8;
+  }
+  .arrow-link__label {
+    display: flex;
+    position: relative;
+  }
+  .arrow-link__svg {
+    height: 1.04167vw;
+    width: 1.15741vw;
+  }
+  .case-hero__content {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+  .case-hero__content .case-hero-content {
+    height: 100%;
+    padding: 0.46296vw;
+    width: 100%;
+  }
+  .case-hero-content__stamp {
+    bottom: 0.46296vw;
+    height: 1.44676vw;
+    margin-top: unset;
+    position: absolute;
+    right: 0.46296vw;
+    width: 2.1412vw;
+  }
+  .case-hero-content__arrow {
+    bottom: 0.5787vw;
+    height: 9.43287vw;
+    left: 0.46296vw;
+    width: 8.21759vw;
+    color: #f8f8f8;
+    display: flex;
+    position: absolute;
+    z-index: 3;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  .case-hero__trigger {
+    cursor: pointer;
+    z-index: 2;
+  }
+  .case-intro {
+    background-color: #f8f8f8;
+    position: relative;
+    height: 100svh;
+  }
+  .gutters {
+    padding: 0 0.46296vw;
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .case-intro .intro {
+    padding-bottom: 18.40278vw;
+  }
+  .h3,
+  h3 {
+    font-size: 3.7037vw;
+    font-weight: 470;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+  }
+  .intro__title {
+    max-width: 96.93287vw;
+  }
+  .h2,
+  h2 {
+    font-size: 4rem;
+    font-weight: 440;
+    letter-spacing: -0.03em;
+    line-height: 0.85;
+  }
+  .p7 {
+    font-size: 0.69444vw;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.1667;
+  }
+  .ttu {
+    text-transform: uppercase;
+  }
+  .fw440 {
+    font-weight: 440;
+  }
+  .fw300 {
+    font-weight: 300;
+  }
+  .section-title {
+    color: currentColor;
+    display: flex;
+    padding-top: 0.34722vw;
+  }
+  .intro .section-title {
+    order: -1;
+  }
+  .case-intro__list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.69444vw;
+    row-gap: 1.38889vw;
+  }
+  .case-intro__list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.34722vw;
+  }
+  .case-intro__list-item-inner {
+    display: flex;
+  }
+  .case-intro__list-item-link {
+    position: relative;
+  }
+  .p5 {
+    font-size: 1.15741vw;
+    font-weight: 440;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    color: currentColor;
+    cursor: pointer;
+    font-family: DenimWeb, sans-serif;
+  }
+</style>
