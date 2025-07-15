@@ -1,9 +1,1947 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Lenis & GSAP Demo">
-  Work
+  <div class="work-grid-wrapper page-bg">
+    <div class="work-filters">
+      <button class="work-filters__toggle h1 fw470">
+        All<small class="work-filter__count p3">[76]</small>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 75 87"
+          class="work-filter__svg"
+        >
+          <path d="M74.25 43.5 0 86.366V.631z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="work-grid">
+    <ul class="work-grid__wrapper grid">
+      <li class="work-grid-item--col-5 work-grid-item">
+        <a href="/work/spirit-blossom-beyond" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Antoine Perez <em>/</em> Sam Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1075238854/rendition/1440p/file.mp4?loc=external&log_user=0&signature=ab2898724061630d120ac55f4d347abc72e77432b75945a58a7436f1975b7a18"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Here, Tomorrow
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.954px, 0px); opacity: 0;"
+                >
+                  This piece is more than just a celebration of new in-game
+                  content. It’s a
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  cinematic journey into a richly imagined universe.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">01<em>/</em>25</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-4 work-grid-item">
+        <a href="/work/transformers" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Wesley Louis</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.25&fit=crop&fm=webp&h=850&w=1512 378w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.5&fit=crop&fm=webp&h=850&w=1512 756w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.75&fit=crop&fm=webp&h=850&w=1512 1134w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?fit=crop&fm=webp&h=850&w=1512 1512w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=1.5&fit=crop&fm=webp&h=850&w=1512 2268w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=2&fit=crop&fm=webp&h=850&w=1512 3024w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.25&fit=crop&h=850&w=1512 378w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.5&fit=crop&h=850&w=1512 756w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=0.75&fit=crop&h=850&w=1512 1134w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?fit=crop&h=850&w=1512 1512w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=1.5&fit=crop&h=850&w=1512 2268w,https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?dpr=2&fit=crop&h=850&w=1512 3024w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724333160-stillframe_thelineanimation_overwatch-2_transformers_14.jpg?fit=crop&h=850&w=1512"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Overwatch 2 x Transformers
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.954px, 0px); opacity: 0;"
+                >
+                  Imagine our faces when we were told the next project we'd get
+                  to work
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  on would be a Overwatch 2 x Transformers collab!
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">02<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/gorillaz" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Max Taylor <em>/</em> Jamie Hewlett</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1007595840/rendition/1080p/file.mp4?loc=external&log_user=0&signature=8a065eccd0e8c174635fafa957df693592a29b7ab7c33d90128791924b610cb9"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Gorillaz <em>/</em> Humility
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  The Line, in collaboration with BlinkInk, is proud to present
+                  the video for
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  ’Humility’, the first track from The Now Now, the brand new
+                  studio
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  album from Gorillaz.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">03<em>/</em>18</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/azuki" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Wesley Louis</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.25&fit=crop&fm=webp&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.5&fit=crop&fm=webp&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.75&fit=crop&fm=webp&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?fit=crop&fm=webp&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=1.5&fit=crop&fm=webp&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=2&fit=crop&fm=webp&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=3&fit=crop&fm=webp&h=634&w=1130 3390w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.25&fit=crop&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.5&fit=crop&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=0.75&fit=crop&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?fit=crop&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=1.5&fit=crop&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=2&fit=crop&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?dpr=3&fit=crop&h=634&w=1130 3390w"
+              />
+              <img
+                class="base-image__img"
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724083284-highresstills_thelineanimation_azukielementals_09.jpeg?fit=crop&h=634&w=1130"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Azuki Elementals
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.3011px, 0px); opacity: 0;"
+                >
+                  Azuki Elementals are a collection of characters within the
+                  four domains
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  of the Garden: Earth, Fire, Lightning and Water.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">04<em>/</em>23</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/hero-marvel-snap" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Max Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1007627724/rendition/1080p/file.mp4?loc=external&log_user=0&signature=41fcd2bd8b9c45ffb168fd843955caf3daa868b55bceb67f951cce974f296f6c"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Marvel Snap <em>/</em> Hero
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 3.9729px, 0px); opacity: 0;"
+                >
+                  Inspired by the shiny new Marvel Snap game, we were tasked
+                  with
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 8.9148px, 0px); opacity: 0;"
+                >
+                  creating a music video for ‘Hero’. A banging new track by
+                  Martin Garrix &amp;
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 17.9147px, 0px); opacity: 0;"
+                >
+                  JVKE.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">05<em>/</em>22</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-9 work-grid-item">
+        <a href="/work/chobani" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Bjorn Erik-Aschim</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?dpr=0.25&fit=crop&fm=webp&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?dpr=0.5&fit=crop&fm=webp&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?fit=crop&fm=webp&h=1928&w=3424 3424w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?dpr=0.25&fit=crop&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?dpr=0.5&fit=crop&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?fit=crop&h=1928&w=3424 3424w"
+              />
+              <img
+                class="base-image__img"
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1725022593-stills_chobani_dear_alice_props_2d_animation_02.jpg?fit=crop&h=1928&w=3424"
+                width="2048"
+                height="1152"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Chobani <em>/</em> Dear Alice
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 16.1298px, 0px); opacity: 0;"
+                >
+                  “Dear Alice” is a love letter from a grandmother to a
+                  granddaughter and
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  an optimistic vision of the future of farming.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">06<em>/</em>21</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-4 work-grid-item">
+        <a href="/work/battle-aces" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Louve Karnas</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1001287348/rendition/1080p/file.mp4?loc=external&log_user=0&signature=94ea754b233a67a16314728853d78dcfe98208d0ca61c3ee94327cf99a6a527c"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Battle Aces
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  Cinematic for Uncapped Games' first release, Battle Aces.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">07<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-5 work-grid-item">
+        <a href="/work/delivery-at-dawn" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Bjorn Erik-Aschim</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.25&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 474w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.5&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 948w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.75&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 1422w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 1896w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=1.5&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 2844w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=2&fit=crop&fm=webp&fp-x=0.43&fp-y=0.47&h=1422&w=1896 3792w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.25&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 474w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.5&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 948w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=0.75&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 1422w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 1896w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=1.5&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 2844w,https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&dpr=2&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896 3792w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1723212534-vlcsnap-2024-03-01-10h19m42s508.jpg?crop=focalpoint&fit=crop&fp-x=0.43&fp-y=0.47&h=1422&w=1896"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Delivery At Dawn
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 17.2719px, 0px); opacity: 0;"
+                >
+                  Delivery at Dawn; A young hopeful rushes to the docks in the
+                  early
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  morning to welcome a mysterious ship with a precious cargo.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">08<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/acura-type-s" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Sam Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1015624443/rendition/1080p/file.mp4?loc=external&log_user=0&signature=49db00925f4bc4a12f5ed83288e16850b95fb1b9535d7d9ef0c17b3b9ec54938"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Acura Chiaki’s Journey <em>/</em> Type S
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  This project lands slap-bang in the centre of the venn diagram
+                  of things
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  we love.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">09<em>/</em>21</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/cowboy-bebop" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Wesley Louis</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.25&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.5&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.75&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=1.5&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=2&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=3&fit=crop&fm=webp&fp-x=0.69&fp-y=0.2&h=634&w=1130 3390w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.25&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.5&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=0.75&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=1.5&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=2&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&dpr=3&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130 3390w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724258092-bebop.jpg?crop=focalpoint&fit=crop&fp-x=0.69&fp-y=0.2&h=634&w=1130"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Cowboy Bebop
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  In celebration of Blizzard's Overwatch 2 x Cowboy Bebop
+                  collaboration,
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  we paid homage to one of the studio's most iconic series by
+                  putting our
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  spin on the legendary opening sequence of Cowboy Bebop.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">10<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/gorillaz-song-machine" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Max Taylor <em>/</em> Jamie Hewlett</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1005423491/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ba23fc441d10d537e88d3c076ea00b808bfb1d937b870f64e0cd2985d8fb9461"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Gorillaz <em>/</em> Song Machine
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.954px, 0px); opacity: 0;"
+                >
+                  Our series of videos from our collaboration with Jamie Hewlett
+                  and the
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  Gorillaz team for their new YouTube series, Song Machine.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">11<em>/</em>20</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-9 work-grid-item">
+        <a href="/work/channel4-ident-2023" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Max Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?dpr=0.25&fit=crop&fm=webp&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?dpr=0.5&fit=crop&fm=webp&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?fit=crop&fm=webp&h=1928&w=3424 3424w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?dpr=0.25&fit=crop&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?dpr=0.5&fit=crop&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?fit=crop&h=1928&w=3424 3424w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724407892-channel4_theline_highresstills_01.jpg?fit=crop&h=1928&w=3424"
+                width="2048"
+                height="1152"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Channel 4
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.0435px, 0px); opacity: 0;"
+                >
+                  ‘Yes Boss’ – We were asked by our friends over at Art Practice
+                  to
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  collaborate on an ident for the spanking new Channel 4
+                  rebranding.
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  They wanted us to create an ident set in Britain's most
+                  essential
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  establishments, the corner shop.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">12<em>/</em>23</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-5 work-grid-item">
+        <a href="/work/bump-superbrawl" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Louve Karnas</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1046476706/rendition/1080p/file.mp4?loc=external&log_user=0&signature=0f19dc8459716f4e29d9ced415db25d5e39fe1164f19f413f82f73901055345a"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Bump! Superbrawl
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  With rigorous training, strategic thinking and team bonding,
+                  the trio will
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  take on the monumental task of battling the champions.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">13<em>/</em>25</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-4 work-grid-item">
+        <a href="/work/tempting-fortune" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Kwok Fung Lam</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.25&fit=crop&fm=webp&fp-x=0.32&fp-y=0.55&h=850&w=1512 378w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.5&fit=crop&fm=webp&fp-x=0.32&fp-y=0.55&h=850&w=1512 756w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.75&fit=crop&fm=webp&fp-x=0.32&fp-y=0.55&h=850&w=1512 1134w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&fit=crop&fm=webp&fp-x=0.32&fp-y=0.55&h=850&w=1512 1512w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=1.5&fit=crop&fm=webp&fp-x=0.32&fp-y=0.55&h=850&w=1512 2268w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.25&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512 378w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.5&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512 756w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=0.75&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512 1134w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512 1512w,https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&dpr=1.5&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512 2268w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1740758338-ignasi-paint-the-line-animation.jpg?crop=focalpoint&fit=crop&fp-x=0.32&fp-y=0.55&h=850&w=1512"
+                width="2472"
+                height="2126"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Tempting Fortune <em>/</em> Channel 4
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 17.9147px, 0px); opacity: 0;"
+                >
+                  This was a welcomed reunion for us, not only with the
+                  wonderful team
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  at 4Creative but also with Ignasi!
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">14<em>/</em>25</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a
+          href="/work/the-hex-warframe-1999-animated-prologue"
+          class="work-grid-item__link"
+        >
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Venla Linna</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1028364087/rendition/2160p/file.mp4?loc=external&log_user=0&signature=f489e642cd21293987a72b2c29c69d1ea743c50305c013b5a0dcbe442b459de1"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              The Hex <em>/</em> Warframe: 1999
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  The film follows the "Protoframes" doing battle against an
+                  army of
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  Tecnocytes.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">15<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/monsters-we-make" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Wesley Louis</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.25&fit=crop&fm=webp&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.5&fit=crop&fm=webp&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.75&fit=crop&fm=webp&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?fit=crop&fm=webp&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=1.5&fit=crop&fm=webp&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=2&fit=crop&fm=webp&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=3&fit=crop&fm=webp&h=634&w=1130 3390w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.25&fit=crop&h=634&w=1130 282w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.5&fit=crop&h=634&w=1130 565w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=0.75&fit=crop&h=634&w=1130 847w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?fit=crop&h=634&w=1130 1130w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=1.5&fit=crop&h=634&w=1130 1695w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=2&fit=crop&h=634&w=1130 2260w,https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?dpr=3&fit=crop&h=634&w=1130 3390w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1734611358-monsterswemake.jpeg?fit=crop&h=634&w=1130"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Monsters We Make
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  This was an extremely satisfying project for us, almost
+                  feeling akin to
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  one of our own personal projects!
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">16<em>/</em>24</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-3 work-grid-item">
+        <a href="/work/amaroandwalden" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Entertainment&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Max Taylor <em>/</em> Tim McCourt</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1015702177/rendition/1080p/file.mp4?loc=external&log_user=0&signature=d30a9ee22a7fcf8481c86324fdb549b60bd5230fa96f09346451ea01bb1edf1f"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Amaro &amp; Walden <em>/</em> Joy Ride
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 19.0848px, 0px); opacity: 0;"
+                >
+                  Amaro &amp; Walden are two rowdy boy racer, hipster hybrids
+                  with that lads
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  on tour attitude. Follow them burning around London town
+                  acting like
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  they’re top dons in a music video.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">17<em>/</em>15</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-9 work-grid-item">
+        <a href="/work/marvel-snap-2" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Tim McCourt <em>/</em> Max Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.25&fit=crop&fm=webp&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.5&fit=crop&fm=webp&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.75&fit=crop&fm=webp&h=1928&w=3424 2568w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?fit=crop&fm=webp&h=1928&w=3424 3424w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.25&fit=crop&h=1928&w=3424 856w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.5&fit=crop&h=1928&w=3424 1712w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?dpr=0.75&fit=crop&h=1928&w=3424 2568w,https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?fit=crop&h=1928&w=3424 3424w"
+              />
+              <img
+                class="base-image__img"
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724238000-marvelsnap_pclaunch_filmstills_06.jpg?fit=crop&h=1928&w=3424"
+                width="3840"
+                height="2160"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Marvel Snap <em>/</em> Go Wide or Go Home
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 18.954px, 0px); opacity: 0;"
+                >
+                  MARVEL SNAP / Go wide or Go home is action-packed promotional
+                  film
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  for the new desktop edition of MARVEL SNAP.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">18<em>/</em>23</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-4 work-grid-item">
+        <a href="/work/the-mighty-grand-piton" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Entertainment&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag">Wesley Louis</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <div class="base-video--fit base-video--loaded base-video">
+              <video
+                height="900"
+                width="1600"
+                playsinline=""
+                muted=""
+                autoplay=""
+                loop=""
+                controlslist="nodownload noplaybackrate"
+                disablepictureinpicture=""
+                src="https://player.vimeo.com/progressive_redirect/playback/1002011443/rendition/1080p/file.mp4?loc=external&log_user=0&signature=2f4fd417aa505f9dfcd731c62c220387693d7a4a6f5e180f77f10187d1e25c58"
+              ></video>
+            </div>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              The Mighty Grand Piton
+            </p>
+            <p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  A family sci-fi adventure featuring Connie, a young
+                  British/Caribbean
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  girl who uncovers a giant mech with mysterious powers under
+                  the
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative;"
+                >
+                  mountains of St Lucia.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">19<em>/</em>19</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="work-grid-item--col-5 work-grid-item">
+        <a href="/work/valorant" class="work-grid-item__link">
+          <div class="work-item-meta-top p6 slash-light">
+            <p class="work-item-meta-top__item work-item-meta-top__item--tags">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Type</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Branded&nbsp;<em>/&nbsp;</em></span
+              >
+            </p>
+            <p class="work-item-meta-top__item">
+              <span class="dot--12 dot--red dot--filled dot"></span>&nbsp;<span
+                class="work-item-meta-top__red">Director</span
+              >&nbsp;<em class="work-item-meta-top__slash">/</em>&nbsp;<span
+                class="work-item-meta-top__tag"
+                >Wesley Louis <em>/</em> Max Taylor</span
+              >
+            </p>
+          </div>
+          <figure class="work-grid-item__fig bg-loading">
+            <picture class="base-image--fit base-image--loaded base-image">
+              <source
+                type="image/webp"
+                srcset="https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.25&fit=crop&fm=webp&h=1422&w=1896 474w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.5&fit=crop&fm=webp&h=1422&w=1896 948w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.75&fit=crop&fm=webp&h=1422&w=1896 1422w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?fit=crop&fm=webp&h=1422&w=1896 1896w"
+              />
+              <source
+                type="image/jpg"
+                srcset="https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.25&fit=crop&h=1422&w=1896 474w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.5&fit=crop&h=1422&w=1896 948w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?dpr=0.75&fit=crop&h=1422&w=1896 1422w,https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?fit=crop&h=1422&w=1896 1896w"
+              />
+              <img
+                class="base-image__img"
+
+                decoding="async"
+                src="https://www.datocms-assets.com/136821/1724943552-champions_tla27102021_still_1-min_00014.jpg?fit=crop&h=1422&w=1896"
+                width="2539"
+                height="1080"
+                alt=""
+              />
+            </picture>
+          </figure>
+          <div class="work-item-meta-bot">
+            <p class="work-item-meta-bot__title p1 ttu fw440 slash-light">
+              Valorant <em>/</em> Die For You
+            </p><p class="work-item-meta-bot__excerpt p6">
+              <span class="text-splitter--splitted text-splitter">
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate3d(0px, 16.7588px, 0px); opacity: 0;"
+                >
+                  VCT X Grabbitz. The music video captures that millisecond
+                  moment
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  where our three key agents battle with their own subconscious,
+                </div>
+                <div
+                  class="work-item-meta-bot__line"
+                  style="display: block; text-align: left; position: relative; translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 0;"
+                >
+                  triggered by a decisive moment during the heat of battle.
+                </div>
+              </span>
+            </p>
+            <div class="meta-info work-item-meta-bot__wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 52 13"
+                class="meta-info__id-svg"
+                ><path
+                  fill="currentColor"
+                  d="M2.24 3.84H.18V3h5.08v.84H3.2V10h-.96zM6.1 3h.96v6.16h3.23V10H6.1zM13 1h1v11h-1z"
+                ></path><path fill="currentColor" d="M13 6h7v1h-7z"></path><rect
+                  width="31"
+                  height="12"
+                  x="20.5"
+                  y=".5"
+                  stroke="currentColor"
+                  rx="6"></rect></svg
+              >
+              <span class="meta-info__id fw440 slash-light">20<em>/</em>21</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  .page-bg {
+    background-color: #f8f8f8;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    color: currentColor;
+    cursor: pointer;
+    font-family: DenimWeb, sans-serif;
+  }
+  .work-filters__toggle {
+    cursor: pointer;
+    left: 0.46296vw;
+    position: absolute;
+    top: 3.66204vw;
+    z-index: 2;
+  }
+  .h1,
+  h1 {
+    font-size: 12.15278vw;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 0.8;
+  }
+  .fw470 {
+    font-weight: 470;
+  }
+  .p3 {
+    font-size: 1.38889vw;
+    font-weight: 470;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .work-filter__count {
+    left: calc(100% + 0.2em);
+    letter-spacing: -0.03em;
+    pointer-events: none;
+    position: absolute;
+    top: 5.2%;
+  }
+  .work-filter__svg {
+    height: 1.38889vw;
+    width: 1.5625vw;
+    bottom: 2.2%;
+    left: calc(100% + 0.02em);
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  .work-grid {
+    padding-bottom: 18.51852vw;
+    padding-top: 29.51389vw;
+  }
+  .work-grid__wrapper {
+    row-gap: 18.51852vw;
+  }
+  .grid {
+    display: grid;
+    gap: 15vw 0.46296vw;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 0 0.46296vw;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .work-grid-item {
+    display: flex;
+    flex-direction: column;
+    grid-column-end: span 5;
+    position: relative;
+  }
+  .work-grid-item--col-5 {
+    aspect-ratio: 948 / 711;
+    grid-column-end: span 5;
+  }
+  .work-grid-item--col-4 {
+    aspect-ratio: 756 / 425;
+    grid-column-end: span 4;
+  }
+  .work-grid-item--col-3 {
+    aspect-ratio: 565 / 317;
+    grid-column-end: span 3;
+  }
+  .work-grid-item--col-9 {
+    aspect-ratio: 1712 / 964;
+    grid-column-end: span 9;
+  }
+  .work-grid-item__link {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .work-item-meta-top {
+    bottom: 100%;
+    -moz-column-gap: 0.81019vw;
+    column-gap: 0.81019vw;
+    left: 0;
+    padding-bottom: 0.23148vw;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+    row-gap: 0.4rem;
+  }
+  .work-item-meta-top__item {
+    align-items: center;
+    display: flex;
+  }
+  .dot {
+    display: flex;
+    position: relative;
+  }
+  .dot--12 {
+    height: 0.69444vw;
+    width: 0.69444vw;
+  }
+  .dot--red {
+    color: #ff391e;
+  }
+  .work-item-meta-top__red {
+    color: #ff391e;
+  }
+  .slash-light em,
+  .slash-light i {
+    font-style: normal;
+    font-weight: 300;
+  }
+  .work-grid-item__link {
+    flex-direction: row;
+  }
+  .work-item-meta-top {
+    bottom: 100%;
+    -moz-column-gap: 0.81019vw;
+    column-gap: 0.81019vw;
+    left: 0;
+    padding-bottom: 0.23148vw;
+    position: absolute;
+  }
+  .work-item-meta-bot {
+    left: 0;
+    padding-top: 0.23148vw;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+  .work-item-meta-bot__title {
+    padding-right: 4.05093vw;
+  }
+  .ttu {
+    text-transform: uppercase;
+  }
+  .p1 {
+    font-size: 1.85185vw;
+    font-weight: 470;
+    line-height: 1.1;
+  }
+  .fw440 {
+    font-weight: 440;
+  }
+  .work-item-meta-bot__excerpt {
+    display: flex;
+    max-width: 28.125vw;
+    padding-top: 0.23148vw;
+  }
+  .p6 {
+    font-size: 0.92593vw;
+    font-weight: 440;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .text-splitter {
+    display: block;
+  }
+  .meta-info {
+    align-items: center;
+    -moz-column-gap: 0.46296vw;
+    column-gap: 0.46296vw;
+    flex-direction: row;
+  }
+  .work-item-meta-bot__wrapper.meta-info {
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
+  .work-item-meta-bot__title {
+    padding-right: 4.05093vw;
+  }
+  .meta-info__id-svg {
+    height: 1.3rem;
+    width: 5.2rem;
+  }
+  .meta-info__id {
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    height: 1.3rem;
+    justify-content: center;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    position: absolute;
+    right: 0.1rem;
+    top: 0;
+    width: 3rem;
+  }
+  .base-video--fit,
+  .base-image--fit {
+    height: 100%;
+    width: 100%;
+  }
+  .work-grid-item__fig {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .bg-loading .base-image,
+  .bg-loading .base-video {
+    display: block;
+    position: relative;
+  }
+  .base-video {
+    display: flex;
+    position: relative;
+  }
+  .base-video video {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .base-image__img {
+    position: relative;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+</style>
